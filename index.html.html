@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<link rel="stylesheet" href="mystyles.css">
+		<title> Michelle's Portfolio </title>
+	<script>
+	function playsong(){
+		var audio = document.getElementById("song");
+		audio.play();
+	}
+	</script>
+	</head>
+	<body class="home" onload="playsong()">
+		<div>
+			<h1 class="heading"> Welcome to Michelle's Portfolio </h1></br>
+		</div>
+		<div style="float: left;">
+		<nav>
+			<ul style="list-style: none;">
+				<li><b> Recent Projects</b> </li>
+				<li> <a href="drawing shapes.html"> Drawing Shapes </a> </li>
+				<li> <a href="text_adventure.html"> Text Adventure </a> </li>
+				<li> <a href="obamicon.html"> Obamicon</a> <li>
+			</ul>
+		</nav>
+		</div>
+		<div style="float: right;">
+		<div id="border">
+		<img src="me.jpg" alt="Picture of Me" width="300" height="300">
+		</div>
+		</div>
+		<div id="AboutMe">
+		<h2> <u>About Me: </u> <h2>
+		<p>My name is Michelle Garcia but my closer friends call me Misha.
+		I love playing video games (specifically Smite) however I play other games too. I have really enjoyed working on some of my projects.
+		Minions are absolutely adorable to me, I also really like donuts. Yum~
+		My favorite male artist is currently The Weeknd and it is my dream to travel to Japan since I love manga/anime and games.</p>
+		</div>
+		<audio id="song" controls>
+		  <source src="godknows.mpeg" type="audio/mpeg">
+		  <source src="godknows.mp3" type="audio/mpeg">
+		</audio>
+	</body>
+</html>
