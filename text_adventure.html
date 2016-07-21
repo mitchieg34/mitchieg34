@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> Text Adventure Project</title>
+		<link rel="stylesheet" href="mystyles.css"> 
+	</head>
+	<body class="newim">
+	<div>
+	<h1 class="heading">Text Adventure</h1>
+	</div>
+	<div class="back">
+	<pre>start_story= '''
+You were on a boat, when suddenly you reach the bermuda triangle and a great storm starts to brew. 
+With the boat rocking so much you hit your head on the railing and become unconscious. 
+When you wake up the sun is shining on your face and the boat feels perfectly still.
+You stand up and see that your boat has washed up on the shore of some strange deserted island.
+You are starving, dehydrated, and in need of shelter from the sun.
+You get out and begin to walk into the jungle.
+'''
+left_fork = 'You decide to go left and come across a strange berry bush.'
+right_fork = 'You choose to go right and come across a giant sparkling lake.'
+left_choice1 = "Type 'pick up berries' to pick from the bush or 'leave bush alone' to move on."
+right_choice1 = "Type 'go near lake' to walk to the shore or 'walk past' to go past it."
+left_choice2 = '''You eat the berries. The poison begins to spread through your body. After 10 minutes you become paralyzed and then slowly die.'''
+left_choice3 = '''You leave the berries alone, unknowingly to you the berries were actualy poisonous and fatal. Although hungry you live to see another day.'''
+right_choice2 = '''Feeling dehydrated you run into the lake and begin to drink the water while happily swimming around.'''
+right_choice3 = '''Farther ahead you come across a small stream.
+You kneel close and collect water in your hands and desperately drink it.
+No longer dehydrated you sit under a tree and doze off.'''
+end_story1="You survived!!!"
+end_story2="Oh no, you died, try again!"
+user_error=True
+user_error2=True
+user_error3=True
+
+print(start_story)
+
+while user_error is True:
+    print("Type 'left' to go left or 'right' to go right.")
+    user_input = input()
+    if user_input=="left" or user_input=="right":
+        user_error=False
+if user_input == "left":
+    print(left_fork)
+    while user_error2 is True:
+        print(left_choice1)
+        berry_decision = input()
+        if user_input=="pick up berries" or user_input=="leave bush alone":
+            user_error2=False
+    if berry_decision == "pick up berries":
+            print(left_choice2)
+            print(end_story2)
+    elif berry_decision == "leave bush alone":
+            print(left_choice3)
+            print(end_story1)
+elif user_input == "right":
+    print(right_fork)
+    while user_error3 is True:
+        print(right_choice1)
+        lake_decision = input()
+        if user_input=="go near lake" or user_input=="walk past":
+            user_error3=False
+    if lake_decision == "go near lake":
+            print(right_choice2)
+            print(end_story2)
+    elif lake_decision == "walk past":
+            print(right_choice3)
+            print(end_story1)
+			</pre>
+			</div>
+	</body>
+</html>

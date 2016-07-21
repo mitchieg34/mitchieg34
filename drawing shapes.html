@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> Drawing Shapes Project</title>
+		<link rel="stylesheet" href="mystyles.css"> 
+	</head>
+	<body class="newim">
+		<div>
+		<h1 class="heading"> Drawing Shapes </h1>
+		</div>
+		<div class="back">
+		<pre> from turtle import *
+def make_a_square():    #makes a function to draw the square
+    begin_fill()
+    pendown()
+    color('purple')
+    for i in range(4):  #draws 4 squares next to each other
+        pendown()
+        forward(100)
+        left(90)
+        forward(100)
+        left(90)
+        forward(100)
+        left(90)
+        forward(100)
+        penup()
+        forward(30)
+    fillcolor("blue")   #colors all squares blue
+    end_fill()
+
+def make_a_circle():    #makes a function to draw the circle
+    penup()
+    goto(200,40)
+    begin_fill()
+    pendown()
+    color("pink")
+    for n in range(2):  #draws 2 circles
+        pendown()
+        circle(100, 360, 30)
+        penup()
+        back(500)
+    fillcolor("purple") #fills circles purple
+    end_fill()
+
+make_a_square()
+make_a_square()
+		</pre>
+		</div>
+	</body>
+</html>

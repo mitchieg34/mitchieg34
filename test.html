@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Example</title>
+    <script>
+      function changeimage(id, primary, secondary) {
+        src = document.getElementById(id).src;
+		if (src.match(primary)) {
+			document.getElementById(id).src=secondary;
+		} else {
+		document.getElementById(id).src = primary
+		}
+      }
+    </script>
+  </head>
+  <body>
+	<img id="pic1" onclick="changeimage('pic1','happy.jpg', 'sad.jpe')" src="happy.jpg" style="width:300px">
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> Obamicon Project</title>
+		<link rel="stylesheet" href="mystyles.css"> 
+	</head>
+	<body class="newim">
+		<div>
+		<h1 class="heading"> Obamicon </h1>
+		</div>
+		<div class="back">
+		<pre>
+from PIL import Image
+im = Image.open("kingbob.jpg")
+print(im)
+
+
+darkBlue = (0, 51, 76)
+red = (217, 26, 33)
+lightBlue = (112, 150, 158)
+yellow = (252, 227, 166)
+
+list2=[]
+pixel = im.getdata()
+pix_list=list(pixel)
+
+for color in pix_list:
+    red=color[0]
+    green=color[1]
+    blue=color[2]
+    intensity = red + green + blue
+    if intensity < 182:
+        color = darkBlue
+        list2.append(color)
+    elif intensity >182 and intensity <=364:
+        color = red
+        list2.append(color)
+    elif intensity >364 and intensity <=364:
+        color = lightBlue
+        list2.append(color)
+    else:
+        color = yellow
+        list2.append(color)
+
+newim = Image.new("RGB", (615, 470))
+newim.putdata(list2)
+newim.rotate(0).show()
+newim.save("kingbob.jpg", "jpeg")
+</pre>
+</div>
+	</body>
+</html>
